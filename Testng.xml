@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Authorizations" parallel="false" verbose="1">
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter" />
+    </listeners>
+    <test name="Authorizations Tests">
+        <classes>
+            <class name="TestNG.day1"></class>
+            <class name="TestNG.day2"></class>
+        </classes>
+    </test>
+
+    <test name="Operations Tests">
+        <classes>
+            <class name="TestNG.day3">
+                <methods>
+                    <exclude name="operations2"></exclude>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+</suite>
